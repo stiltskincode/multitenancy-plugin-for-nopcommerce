@@ -1,0 +1,11 @@
+{
+    "Group": "Infrastructure",
+    "FriendlyName": "Multitenancy",
+    "SystemName": "NopCommerce Multitenancy",
+    "Version": "1.0.28",
+    "SupportedVersions": [ "4.60" ],
+    "Author": "Lukasz Glowacki",
+    "DisplayOrder": 1,
+    "FileName": "Nop.Plugin.Misc.Multitenancy.dll",
+    "Description": ""
+  }

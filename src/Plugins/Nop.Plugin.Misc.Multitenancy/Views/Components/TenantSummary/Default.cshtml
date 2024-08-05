@@ -1,0 +1,11 @@
+@model IEnumerable<Nop.Plugin.Misc.Multitenancy.Domains.Tenant>
+
+<div class="tenant-summary">
+    <h3>Tenant Summary</h3>
+    <ul>
+        @foreach (var t in Model)
+        {
+            <li>@t.Name - @t.Email</li>
+        }
+    </ul>
+</div>

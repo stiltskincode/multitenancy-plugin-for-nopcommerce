@@ -1,0 +1,8 @@
+Group: Misc
+FriendlyName: Misc Multitenancy
+SystemName: Multitenancy
+Version: 1.0.10
+SupportedVersions: 4.60
+Author: Lukaasz Glowacki
+DisplayOrder: 1
+FileName: Nop.Plugin.Misc.Multitenancy.dll

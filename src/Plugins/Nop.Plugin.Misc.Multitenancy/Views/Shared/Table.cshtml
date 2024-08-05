@@ -1,0 +1,38 @@
+@model Nop.Web.Framework.Models.DataTables.DataTablesModel
+
+<table id="@Model.Name" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            @foreach (var column in Model.ColumnCollection)
+            {
+                <th>@column.Title</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#@Model.Name").dataTable({
+                "ajax": {
+                    "url": "@Model.UrlRead",
+                    "type": "POST",
+                    "data": function (d) {
+                        d.length = @Model.Length;
+                    }
+                },
+                "columns": [
+                    @foreach (var column in Model.ColumnCollection)
+                    {
+                        @:{"data": "@column.Title"},
+                    }
+                ],
+                "pageLength": @Model.Length,
+                "lengthMenu": @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.LengthMenu))
+            });
+        });
+    </script>
+}
